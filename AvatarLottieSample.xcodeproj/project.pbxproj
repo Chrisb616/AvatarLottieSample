@@ -12,6 +12,7 @@
 		13CCA95820360E3B007680CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CCA95620360E3B007680CA /* Main.storyboard */; };
 		13CCA95A20360E3B007680CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CCA95920360E3B007680CA /* Assets.xcassets */; };
 		13CCA95D20360E3B007680CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CCA95B20360E3B007680CA /* LaunchScreen.storyboard */; };
+		704AA7D96786484E72176473 /* Pods_AvatarLottieSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E8B173ECE4C8C24BBC29F1 /* Pods_AvatarLottieSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		13CCA95920360E3B007680CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13CCA95C20360E3B007680CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CCA95E20360E3B007680CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29E8B173ECE4C8C24BBC29F1 /* Pods_AvatarLottieSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvatarLottieSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA6B47C75671F0C5286CDB0 /* Pods-AvatarLottieSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvatarLottieSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvatarLottieSample/Pods-AvatarLottieSample.release.xcconfig"; sourceTree = "<group>"; };
+		CFBC3C9F4C731190554E4218 /* Pods-AvatarLottieSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvatarLottieSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AvatarLottieSample/Pods-AvatarLottieSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704AA7D96786484E72176473 /* Pods_AvatarLottieSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				13CCA95120360E3B007680CA /* AvatarLottieSample */,
 				13CCA95020360E3B007680CA /* Products */,
+				175BE1832217A6DE792CF8A8 /* Pods */,
+				8080FA451AE2BD03A15D28F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = AvatarLottieSample;
 			sourceTree = "<group>";
 		};
+		175BE1832217A6DE792CF8A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC3C9F4C731190554E4218 /* Pods-AvatarLottieSample.debug.xcconfig */,
+				5BA6B47C75671F0C5286CDB0 /* Pods-AvatarLottieSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8080FA451AE2BD03A15D28F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29E8B173ECE4C8C24BBC29F1 /* Pods_AvatarLottieSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13CCA96120360E3B007680CA /* Build configuration list for PBXNativeTarget "AvatarLottieSample" */;
 			buildPhases = (
+				20F2D4DBD287CA3D49C44269 /* [CP] Check Pods Manifest.lock */,
 				13CCA94B20360E3B007680CA /* Sources */,
 				13CCA94C20360E3B007680CA /* Frameworks */,
 				13CCA94D20360E3B007680CA /* Resources */,
+				28B762AFBA0C53F9F72D72B1 /* [CP] Embed Pods Frameworks */,
+				B9A8175B2F5281AE6E87DFEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20F2D4DBD287CA3D49C44269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AvatarLottieSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28B762AFBA0C53F9F72D72B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AvatarLottieSample/Pods-AvatarLottieSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AvatarLottieSample/Pods-AvatarLottieSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A8175B2F5281AE6E87DFEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AvatarLottieSample/Pods-AvatarLottieSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13CCA94B20360E3B007680CA /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		13CCA96220360E3B007680CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFBC3C9F4C731190554E4218 /* Pods-AvatarLottieSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +368,7 @@
 		};
 		13CCA96320360E3B007680CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA6B47C75671F0C5286CDB0 /* Pods-AvatarLottieSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
